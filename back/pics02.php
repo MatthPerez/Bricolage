@@ -518,12 +518,6 @@ function getList02() {
         'description' => '',
         'category' => 'Horloge'],
 
-        ['name' => 'Horloge (20)',
-        'title' => '',
-        'price' => '',
-        'description' => '',
-        'category' => 'Horloge'],
-
 
     ];
 };

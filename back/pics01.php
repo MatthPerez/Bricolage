@@ -512,11 +512,5 @@ function getList01() {
         'description' => '',
         'category' => 'Bouteille'],
 
-        ['name' => 'Bouteille (67)',
-        'title' => '',
-        'price' => '',
-        'description' => '',
-        'category' => 'Bouteille'],
-
     ];
 };
