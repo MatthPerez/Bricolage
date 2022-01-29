@@ -7,7 +7,7 @@ require '../back/header.php';
 
 <body class="brown-body">
     <!--Haut de page-->
-    <h1>Trouvez l'inspiration et exprimez votre créativité</h1>
+    <h1>Trouvez l'inspiration 🧚 Exprimez votre créativité</h1>
 
     <!--Corps de page-->
     <?php
@@ -18,14 +18,14 @@ require '../back/header.php';
     $list02 = getList02();
     $list03 = getList03();
 
-    echo '<div class="row justify-content-evenly">';
+    echo '<div class="row align-content-evenly">';
 
     // Colonne 1
     echo '
         <div class="col-4">';
     for ($a = 0; $a < count($list01); $a++) {
         echo '
-                <img src="../pictures/' . $list01[$a]['name'] . '.jpg" class="small-img rounded-10">';
+            <img src="../pictures/' . $list01[$a]['name'] . '.jpg" class="">';
     };
     echo '
         </div>';
@@ -35,7 +35,7 @@ require '../back/header.php';
         <div class="col-4">';
     for ($a = 0; $a < count($list02); $a++) {
         echo '
-                <img src="../pictures/' . $list02[$a]['name'] . '.jpg" class="small-img rounded-10">';
+            <img src="../pictures/' . $list02[$a]['name'] . '.jpg" class="small-img">';
     };
     echo '
         </div>';
@@ -45,7 +45,7 @@ require '../back/header.php';
         <div class="col-4">';
     for ($a = 0; $a < count($list03); $a++) {
         echo '
-                <img src="../pictures/' . $list03[$a]['name'] . '.jpg" class="small-img rounded-10">';
+            <img src="../pictures/' . $list03[$a]['name'] . '.jpg" class="small-img">';
     };
     echo '
         </div>';
