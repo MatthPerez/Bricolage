@@ -2,12 +2,14 @@
 $title = 'Matthieu PEREZ - Acheter';
 $active1 = '';
 $active2 = 'active';
+$active3 = '';
+$style = '../css/style.css';
 require '../back/header.php';
 ?>
 
 <body class="cold-body">
     <!--Shopping-->
-    <h1>Acheter mes créations 😽</h1>
+    <h1>Acheter mes créations</h1>
     <p class="centered mb-5">Paiement Paypal ©</p>
     <div class="container">
         <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3">

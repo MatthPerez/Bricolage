@@ -2,12 +2,14 @@
 $title = 'Matthieu PEREZ - Galerie photos';
 $active1 = 'active';
 $active2 = '';
+$active3 = '';
+$style = '../css/style.css';
 require '../back/header.php';
 ?>
 
 <body class="brown-body">
     <!--Haut de page-->
-    <h1>Trouvez l'inspiration 🧚 Exprimez votre créativité</h1>
+    <h1>Trouvez l'inspiration et exprimez votre créativité</h1>
 
     <!--Corps de page-->
     <?php
@@ -18,37 +20,45 @@ require '../back/header.php';
     $list02 = getList02();
     $list03 = getList03();
 
-    echo '<div class="row align-content-evenly">';
-
     // Colonne 1
     echo '
-        <div class="col-4">';
+    <div class="wrapper">
+        <div class="col police">';
     for ($a = 0; $a < count($list01); $a++) {
-        echo '
-            <img src="../pictures/' . $list01[$a]['name'] . '.jpg" class="">';
+        echo
+        '<img src="../pictures/' . $list01[$a]['name'] . '.jpg" class="w-100 mb-2 rounded-5">
+            ';
     };
     echo '
-        </div>';
+    </div>
+</div>';
 
-    // Colonne 2
-    echo '
-        <div class="col-4">';
-    for ($a = 0; $a < count($list02); $a++) {
-        echo '
-            <img src="../pictures/' . $list02[$a]['name'] . '.jpg" class="small-img">';
-    };
-    echo '
-        </div>';
+// Colonne 2
+echo '
+    <div class="wrapper">
+        <div class="col police">';
+for ($a = 0; $a < count($list02); $a++) {
+    echo
+    '<img src="../pictures/' . $list02[$a]['name'] . '.jpg" class="w-100 mb-2 rounded-5">
+            ';
+};
+echo '
+    </div>
+</div>';
 
-    // Colonne 3
-    echo '
-        <div class="col-4">';
-    for ($a = 0; $a < count($list03); $a++) {
-        echo '
-            <img src="../pictures/' . $list03[$a]['name'] . '.jpg" class="small-img">';
-    };
-    echo '
-        </div>';
+// Colonne 3
+echo '
+    <div class="wrapper">
+        <div class="col police">';
+for ($a = 0; $a < count($list03); $a++) {
+    echo
+    '<img src="../pictures/' . $list03[$a]['name'] . '.jpg" class="w-100 mb-2 rounded-5">
+            ';
+};
+echo '
+    </div>
+</div>';
+
     ?>
 
     <!-- Envoi images -->

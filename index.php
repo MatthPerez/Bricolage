@@ -2,6 +2,8 @@
 $title = 'Matthieu PEREZ - Le bricolage DIY';
 $active1 = '';
 $active2 = '';
+$active3 = '';
+$style = 'css/style.css';
 require 'back/header.php';
 ?>
 
