@@ -1,42 +1,41 @@
 <?php
 $title = 'Matthieu PEREZ - Acheter';
+$active0 = '';
 $active1 = '';
 $active2 = 'active';
 $active3 = '';
 $style = '../css/style.css';
+$retour = '../';
+$bgColor = 'bg-cold';
+$fontColor = 'f-blue';
 require '../back/header.php';
 ?>
 
 <body class="cold-body">
     <!--Shopping-->
-    <h1>Acheter mes créations</h1>
-    <p class="centered mb-5">Paiement Paypal ©</p>
-    <div class="container">
-        <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3">
-            <?php
-            require '../back/forsale.php';
-            $categories = ['A vendre'];
-            // $categories = [''];
-            $list = getList();
+    <?php
+    require '../back/icons.php';
+    echo '<h1 class="superh1">' . $eCommerce . ' La boutique aux créations ' . $eCommerce . '</h1>';
+    ?>
+    <p class="police p-3">Vous rêvez d'acquérir une pièce de décoration originale ? Votre salon a besoin d'une touche de créativité et vous imez le style rustique ? Découvrez toutes les créations artisanales de nos artistes locaux. Ce sont toutes des pièces uniques réalisées à partir de matériel de récupération, d'objets détournés, issus de l'imaginaire débordant de nos collaborateurs. Bien sûr, </p>
 
-            foreach ($categories as $category) {
-                for ($a = 0; $a < count($list); $a++) {
-                    if ($list[$a]['category'] == $category) {
-                        echo '
-                    <div class="col">
-                        <div class="p-3 border bg-light centered">
-                            <img src="../pictures/' . $list[$a]['name'] . '.jpg" class="card-img-top pt-1">
-                            <button type="button" class="btn btn-light-blue mt-3 mb-2">Acheter</button>
-                            <h5>' . $list[$a]['title'] . '</h5>
-                            <p class="card-text f-secondary">' . $list[$a]['price'] . ' €</p>
-                            <p class="card-text f-secondary">' . $list[$a]['text'] . '</p>
-                        </div>
-                    </div>';
-                    };
-                };
-            };
-            ?>
-        </div>
+    <div class="container">
+        <?php
+        require '../back/forsale.php';
+        $listSale = getList();
+        for ($a = 0; $a < count($listSale); $a++) {
+            ($listSale[$a]['category'] == 'A vendre' ? $b = '
+            <div class="card bg-lightblue m-1">
+                <div class="police card-item f-xx-large">' . $listSale[$a]['title'] . '</div>
+                <div class="police card-item"><img src="../pictures/' . $listSale[$a]['name'] . '.jpg" class="card-w rounded-5"></div>
+                <div class="police card-item">' . $listSale[$a]['price'] . ' €</div>
+                <div class="police card-item">' . $listSale[$a]['text'] . '</div>
+                <button class="mb-1">Acheter</button>
+            </div>' : $b = '');
+            echo PHP_EOL . $b;
+        };
+        ?>
+    </div>
 </body>
 
 <?php

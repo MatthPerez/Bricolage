@@ -1,5 +1,5 @@
 <?php
-$text='';
+$text = '';
 if (isset($_FILES['photo'])) {
   if ($_FILES['photo']['error'] !== UPLOAD_ERR_OK) {
     $text = 'Erreur de téléchargement...';

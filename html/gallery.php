@@ -1,15 +1,19 @@
 <?php
 $title = 'Matthieu PEREZ - Galerie photos';
+$active0 = '';
 $active1 = 'active';
 $active2 = '';
 $active3 = '';
 $style = '../css/style.css';
+$retour='../';
+$bgColor='bg-lightbrown';
+$fontColor='f-white';
 require '../back/header.php';
 ?>
 
 <body class="brown-body">
     <!--Haut de page-->
-    <h1>Trouvez l'inspiration et exprimez votre créativité</h1>
+    <h1 class="superh1">Trouvez l'inspiration et exprimez votre créativité</h1>
 
     <!--Corps de page-->
     <?php
@@ -20,72 +24,47 @@ require '../back/header.php';
     $list02 = getList02();
     $list03 = getList03();
 
+    echo '<div class="row">';
+
     // Colonne 1
     echo '
-    <div class="wrapper">
-        <div class="col police">';
-    for ($a = 0; $a < count($list01); $a++) {
-        echo
-        '<img src="../pictures/' . $list01[$a]['name'] . '.jpg" class="w-100 mb-2 rounded-5">
+        <div class="col-4">
             ';
+    for ($a = 0; $a < count($list01); $a++) {
+        echo '<img src="../pictures/' . $list01[$a]['name'] . '.jpg" class="w-96p m-2p rounded-5">';
     };
     echo '
-    </div>
-</div>';
+        </div>';
 
-// Colonne 2
-echo '
-    <div class="wrapper">
-        <div class="col police">';
-for ($a = 0; $a < count($list02); $a++) {
-    echo
-    '<img src="../pictures/' . $list02[$a]['name'] . '.jpg" class="w-100 mb-2 rounded-5">
+    // Colonne 2
+    echo '
+        <div class="col-4">
             ';
-};
-echo '
-    </div>
-</div>';
+    for ($a = 0; $a < count($list02); $a++) {
+        echo '<img src="../pictures/' . $list02[$a]['name'] . '.jpg" class="w-96p m-2p rounded-5">';
+    };
+    echo '
+        </div>';
 
-// Colonne 3
-echo '
-    <div class="wrapper">
-        <div class="col police">';
-for ($a = 0; $a < count($list03); $a++) {
-    echo
-    '<img src="../pictures/' . $list03[$a]['name'] . '.jpg" class="w-100 mb-2 rounded-5">
+    // Colonne 3
+    echo '
+        <div class="col-4">
             ';
-};
-echo '
-    </div>
-</div>';
+    for ($a = 0; $a < count($list03); $a++) {
+        echo '<img src="../pictures/' . $list03[$a]['name'] . '.jpg" class="w-96p m-2p rounded-5">';
+    };
+    echo '
+        </div>';
+
+    echo '
+    </div>';
 
     ?>
-
-    <!-- Envoi images -->
-    <div class="container-bottom mb-5a">
-        <div class="row">
-            <div class="col-6 centered">
-                Et comme j'apprécie les contributions spontanées des passionnés de bricolage, vous pouvez m'envoyer vos photos de créations pour qu'elles viennent éventuellement agrémenter ce site.
-            </div>
-            <div class="col-6 centered">
-                <form class="pb-4" action="post" action="../back/contact.php">
-                    <label for="photo"></label>
-                    <input type="file" id="photo" name="photo" accept="image/png, image/jpeg, image/jpg" required>
-                    <button class="btn btn-light-blue">Envoyer</button>
-                </form>
-
-                <?php
-                require '../back/contact.php';
-                echo '<p class="f_danger">' . $text . '</p>';
-                ?>
-            </div>
-        </div>
-    </div>
 </body>
 
 <?php
 $footer = 'Matthieu PEREZ - Copyright 2022 ©';
-require '../back/contact.php';
+require '../back/footer.php';
 ?>
 
 </html>

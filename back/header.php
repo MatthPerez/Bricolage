@@ -14,18 +14,13 @@ echo '<!DOCTYPE html>
 </head>'
 ?>
 
-
-<header>
-  
-  <nav>
-    <ul class="nav__links">
-      <li><a href="#">Services</a></li>
-      <li><a href="#">Projects</a></li>
-      <li><a href="#">About</a></li>
-    </ul>
-  </nav>
-  <a href="#" class="cta"><button>Contact</button></a>
-  
+<?php
+echo '
+  <div class="sticky-top title-container ' . $bgColor . '">
+    <div class="item mh-1"><a href="' . $retour . 'index.php" class="shadowed f-size ' . $fontColor . ' superlink1 ' . $active0 . '" title="Accueil">Accueil</a></div>
+    <div class=" item mh-1"><a href="' . $retour . 'html/gallery.php" class="shadowed f-size ' . $fontColor . ' superlink1 ' . $active1 . '" title="Galerie images">Galerie</a></div>
+    <div class=" item mh-1"><a href="' . $retour . 'html/shop.php" class="shadowed f-size ' . $fontColor . ' superlink1 ' . $active2 . '" title="Visiter le magasin">Acheter</a></div>
+    <div class=" item mh-1"><a href="' . $retour . 'html/tests.php" class="shadowed f-size ' . $fontColor . ' superlink1 ' . $active3 . '">Tests</a></div>
+  </div>
 </header>
-
-<li class="nav-item"><a href="../../Bricolage%202/html/gallery.php" class="nav-link ' . $active1 . '">Galerie</a></li>
+  ';
