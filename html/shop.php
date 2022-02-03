@@ -17,7 +17,8 @@ require '../back/header.php';
     require '../back/icons.php';
     echo '<h1 class="superh1">' . $eCommerce . ' La boutique aux créations ' . $eCommerce . '</h1>';
     ?>
-    <p class="police p-3">Vous rêvez d'acquérir une pièce de décoration originale ? Votre salon a besoin d'une touche de créativité et vous imez le style rustique ? Découvrez toutes les créations artisanales de nos artistes locaux. Ce sont toutes des pièces uniques réalisées à partir de matériel de récupération, d'objets détournés, issus de l'imaginaire débordant de nos collaborateurs.</p>
+
+    <p class="police p-3 f-large">Vous rêvez d'acquérir une pièce de décoration originale ? Votre salon a besoin d'une touche de créativité et vous aimez le style rustique ? Découvrez toutes les créations artisanales de nos artistes locaux. Ce sont toutes des pièces uniques réalisées à partir de matériel de récupération, d'objets détournés, issus de l'imaginaire débordant de nos collaborateurs.</p>
 
     <div class="container">
         <?php
@@ -39,8 +40,10 @@ require '../back/header.php';
 </body>
 
 <?php
-$footer = 'Matthieu PEREZ - Copyright 2022 ©';
+require '../back/icons.php';
+$footer = '<div class="cent-police f-large">Votre panier contient <span class="f-darkred">' . $articles . ' article(s)</span>. Total du panier = <span class="f-darkred">' . $cartAmount . ' €</span></div>';
 require '../back/footer.php';
+require '../back/cart.php';
 ?>
 
 </html>

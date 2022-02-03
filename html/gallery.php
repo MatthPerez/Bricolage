@@ -63,7 +63,8 @@ require '../back/header.php';
 </body>
 
 <?php
-$footer = 'Matthieu PEREZ - Copyright 2022 ©';
+require '../back/icons.php';
+$footer = 'Matthieu PEREZ - Copyright 2022 ©<br>Réseaux sociaux ' . $instagram . ' ' . $facebook . ' ' . $whatsapp . ' ' . $mail . ' ' . $eCommerce;
 require '../back/footer.php';
 ?>
 
