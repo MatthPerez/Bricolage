@@ -17,7 +17,7 @@ require '../back/header.php';
     require '../back/icons.php';
     echo '<h1 class="superh1">' . $eCommerce . ' La boutique aux créations ' . $eCommerce . '</h1>';
     ?>
-    <p class="police p-3">Vous rêvez d'acquérir une pièce de décoration originale ? Votre salon a besoin d'une touche de créativité et vous imez le style rustique ? Découvrez toutes les créations artisanales de nos artistes locaux. Ce sont toutes des pièces uniques réalisées à partir de matériel de récupération, d'objets détournés, issus de l'imaginaire débordant de nos collaborateurs. Bien sûr, </p>
+    <p class="police p-3">Vous rêvez d'acquérir une pièce de décoration originale ? Votre salon a besoin d'une touche de créativité et vous imez le style rustique ? Découvrez toutes les créations artisanales de nos artistes locaux. Ce sont toutes des pièces uniques réalisées à partir de matériel de récupération, d'objets détournés, issus de l'imaginaire débordant de nos collaborateurs.</p>
 
     <div class="container">
         <?php
@@ -30,7 +30,7 @@ require '../back/header.php';
                 <div class="police card-item"><img src="../pictures/' . $listSale[$a]['name'] . '.jpg" class="card-w rounded-5"></div>
                 <div class="police card-item">' . $listSale[$a]['price'] . ' €</div>
                 <div class="police card-item">' . $listSale[$a]['text'] . '</div>
-                <button class="mb-1">Acheter</button>
+                <button class="mb-1">Ajouter au manier</button>
             </div>' : $b = '');
             echo PHP_EOL . $b;
         };

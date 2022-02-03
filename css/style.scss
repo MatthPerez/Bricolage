@@ -182,8 +182,8 @@
 .zoom-s {-webkit-transform: scale(1); transform: scale(1); -webkit-transition: 500ms all ease-in-out; transition: 500ms all ease-in-out; &:hover {-webkit-transform: scale(1.1); transform: scale(1.1); -webkit-transition: 500ms all ease-in-out; transition: 500ms all ease-in-out;};}
 @import url('https://fonts.googleapis.com/css?family=Montserrat:500');
 @keyframes flash {0% {opacity: 0.4;} 100% {opacity: 1;};}
-@media screen and (max-width: 500px) {.card {width: 150px;} button {width: 70px;}.card-w {width: 120px;} .card-item {width: 130px;} .f-size {font-size: 15px;}}
-@media screen and (max-width: 800px) {.card {width: 300px;} button {width: 240p;}.card-w {width: 270px;}.card-item {width: 280px;} .f-size {font-size: 20px;}}
+@media screen and (max-width: 500px) {.card {width: 150px;} button {width: 90px;}.card-w {width: 120px;} .card-item {width: 130px;} .f-size {font-size: 15px;}}
+@media screen and (min-width: 501px) and (max-width: 800px) {.card {width: 300px;} button {width: 240px;}.card-w {width: 270px;}.card-item {width: 280px;} .f-size {font-size: 20px;}}
 @media screen and (min-width: 801px) {.card {width: 400px;} button {width: 340px;}.card-w {width: 370px;}.card-item {width: 380px;} .f-size {font-size: 25px;}}
 @-webkit-keyframes flash {0% {opacity: 0.4;} 100% {opacity: 1;};}
 button {margin-left: 30px; padding: 9px 25px; background: rgba(0, 136, 169, 1); border: none; border-radius: 50px; cursor: pointer; transition: all 0.3s ease 0s; &:hover {background: rgba(0, 136, 169, 0.8);}}
